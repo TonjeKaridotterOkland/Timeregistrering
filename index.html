@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--Menu for the pages-->
+    <nav>
+        <ul class="menu">
+            <li><a href="/index.html"><i class="fas fa-home"></i> Timeregistering</a></li>
+            <div id="hidden-links">
+                <li><a href="resultater.html"><i class="fas fa-comment-dots"></i> Resultater</a></li>
+            </div>
+   
+        </ul>
+    </nav>
+
+
+
+    <section>
+        <form>
+        <label for="number-of-hours">Antall timer</label>
+          <input type="number" min="1" step="1" name="Antall timer" id="number-of-hours" required>
+          <label for="comment">Kommentar</label>
+          <input type="text" name="Kommentar" id="comment">
+          <button id="form-button" onclick="saveHours()">Send inn</button>
+        </form>
+      </section>
+      
+      <section>
+          <div id="show-text">
+              hei
+          </div>
+      </section>
+      
+          
+
+
+    
+<!--Footer-->
+    <footer>
+        <div class="fas">
+            Kontakt oss her: 
+           <p > epost@epost.com</p> 
+           <p > testgata 1, 0101 Test</p>
+        </div>
+    </footer>
+    
+<!--javascript files-->
+        <script src="start.js"></script>
+</body>   
+</html>

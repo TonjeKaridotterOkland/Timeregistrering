@@ -1,0 +1,134 @@
+/*Standard styling for the web page*/
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*Menu for the pages*/
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #434242;
+    position: relative;
+    opacity: 1;   
+    z-index: 3;
+}
+
+
+.menu li a{
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    size: 10px;  
+}
+
+li a:hover{
+    background-color: rgb(165, 165, 165);
+    color: black;
+    border-radius: 20%;
+}
+
+/*icons for the menu*/
+.fas{
+    color: darkgray;
+}
+
+.fa-bars{
+    color: white;
+}
+
+/*Get the menu to stick to the top. I tried to make it a smooth transition, but was not able to in time, unfortunately.*/
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;  
+  }
+  
+
+/*footer*/
+footer{
+    border-top: black solid 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 160px;
+    background-color:#434242;
+    
+}
+
+footer div{
+    margin: 2%;
+    float: left;
+}
+
+/*Media queries*/
+/*For tablets*/
+@media only screen and (min-width: 600px){
+ /*Menu*/
+    .menu li{
+        font-size: 20px;
+        padding-left: 10px;
+        margin: 10px;
+    }
+    .menu .hamburger-menu{
+        padding: 20px;
+    }
+
+/*Footer*/
+    footer img{
+        width: 150px;
+    }
+
+    #map-location{
+        width: 200px;
+        height: auto;
+        margin: 2%;   
+    }
+}
+
+@media only screen and (min-width: 900px){
+    
+/*Menu- navnbar*/
+    .menu li{
+        font-size: 20px;
+        padding-left: 50px;
+        margin: 10px;
+    }
+
+    .menu #hidden-links{
+        display: inline-block;
+    }
+
+    .menu .hamburger-menu{
+        display: none;
+    } 
+
+    li{
+        float: left;
+    } 
+
+    /*Footer*/
+    #map-location{
+        width: 300px;
+        height: auto;
+        margin: 3%;   
+    }
+
+    footer img{
+        width: 200px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+/*standard box styling*/
+    .standard-box-styling img{
+        margin: 5;
+    }
+}
+
