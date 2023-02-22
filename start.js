@@ -3,6 +3,10 @@ var showText = document.getElementById("show-text");
 var hoursRegistered = document.getElementById("number-of-hours");
 var commentToHoursRegistered = document.getElementById("comment");
 var numberOfHours = document.getElementById("number-of-hours");
+let counter = -1;
+var hoursCounter = 0;
+
+showTimeSheet();
 
 function getTimeSheet(){
     //Get the previously saved values
@@ -12,6 +16,8 @@ function getTimeSheet(){
 function setTimeSheet(a){
    //Set values to localstorage
    window.localStorage.setItem(`timeSheetForPerson`, JSON.stringify(a));
+  location.reload();
+
 };
 
 function saveHours(event){
@@ -30,21 +36,39 @@ function saveHours(event){
     // Push the new values to the timeSheet-array and set in localstorage
          let timeSheet = getTimeSheet();
          timeSheet.push(todaysTimeSheet);
-         setTimeSheet(timeSheet);
-         showText.innerHTML = "Timene er lagret";
+
+    //Grunnen til at jeg bruker alert er for å vise bruker at timene er lagret før siden reloader.
+         alert("timene er lagret");
+         setTimeSheet(timeSheet); 
     };
 };
 
 function showTimeSheet(){
     let timeSheet = getTimeSheet();
     for (let registration of timeSheet){
+        counter++;
+document.getElementById("show-the-hours").innerHTML += 
+`<div class="row">
+<div class="col-1">${registration.hours} </div>
+<div class="col-1"> ${registration.comment}</div>
+ <div class="col-1">
+ <button class="btn btn-outline-danger btn-sm" onclick="deleteRow('${counter}')">Slett</button>
+ </div>
+ </div>`;
+ hoursCounter += registration.hours;     
+    };
 
-document.getElementById("show-the-hours").innerHTML += `<div class="row"><div class="col-2">${registration.hours} </div><div class="col-2"> ${registration.comment}</div> <div class="col-2"><button>x</button></div></div>`;     
-// document.getElementById("show-the-comments").innerHTML += `<div class="">${registration.comment} </div>`;     
-// document.getElementById("show-delete-button").innerHTML += `<button>x</button>`;     
-        console.log("timer " +registration.hours);
-        console.log("kommentar " +registration.comment);
+    
+    if(hoursCounter > 100){
+        alert("Summen av antall registerte timer har oversteget 100. Antall timer registert: "+ hoursCounter);
+     }
+   
+};
 
-    }
-}
-showTimeSheet();
+function deleteRow(rowToDelete){
+    var data = getTimeSheet();
+    data.splice(rowToDelete, 1);
+    setTimeSheet(data);
+};
+
+

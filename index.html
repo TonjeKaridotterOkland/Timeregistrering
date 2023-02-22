@@ -13,9 +13,9 @@
 <!--Menu for the pages-->
     <nav>
         <ul class="menu">
-            <li><a href="/index.html"><i class="fas fa-home"></i> Timeregistering</a></li>
+            <li><a href="/index.html"> Timeregistering</a></li>
             <div id="hidden-links">
-                <li><a href="resultater.html"><i class="fas fa-comment-dots"></i> Resultater</a></li>
+                <li><a href="resultater.html"> Resultater</a></li>
             </div>
    
         </ul>
@@ -25,11 +25,16 @@
 
     <section>
         <form>
+            <div class="form-group">
         <label for="number-of-hours">Antall timer</label>
-          <input type="number" min="1" step="1" name="Antall timer" id="number-of-hours" required>
+          <input type="number" min="1" step="1" name="Antall timer" id="number-of-hours" class="form-control" required>
+          <small id="emailHelp" class="form-text text-muted">Kun hele tall</small>
+        </div>
+        <div class="form-group">
           <label for="comment">Kommentar</label>
-          <input type="text" name="Kommentar" id="comment">
-          <button id="form-button" onclick="saveHours(event)">Send inn</button>
+          <input type="text" name="Kommentar" id="comment" class="form-control" >
+          <button id="form-button" class="btn btn-primary" onclick="saveHours(event)">Send inn</button>
+        </div>
         </form>
       </section>
       
@@ -41,15 +46,7 @@
           
 
 
-    
-<!--Footer-->
-    <footer>
-        <div class="fas">
-            Kontakt oss her: 
-           <p > epost@epost.com</p> 
-           <p > testgata 1, 0101 Test</p>
-        </div>
-    </footer>
+
     
 <!--javascript files-->
         <script src="start.js"></script>
