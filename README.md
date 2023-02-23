@@ -13,9 +13,9 @@
 - Åpne mappen med filene
 - Åpne mappen i VS Code
 - Last ned extension som heter live preview
-- Åpne en .html fil i VS Code
-- Klikk på symbolet opp i høyre hjørne som heter "Show preview"
-- Klikk en gang til for å åpne det i en nettleser
+- Åpne index.html filen i VS Code
+- Klikk på symbolet opp i høyre hjørne i VS Code som ser ut som et vindu med en nøkkel og som heter "Show preview"
+- Trykk på hamburgermenyen i preview-vinduet og velg "Open in browser"
 
 Obs: Løsningen bruker localstorage, så hvis løsningen kun testes i preview inne i VS Code, så vil ikke timeregistreringen bli lagret eller vist i Resultater-fanen.
 
@@ -26,8 +26,8 @@ Jeg har tatt høyde for at man ønsker å registere timer man har jobbet, og der
 
 Mangler:
 Ikke hatt tid til å skrive tester.
-Når det kommer til Input validering, så er det kun validert på client siden med HTML5.
-Løsningen er ikke dårlig skalerbarhet, særlig for små skjermer.
+Når det kommer til input validering, så er det kun validert på client siden med HTML5.
+Løsningen har dårlig skalerbarhet, særlig for små skjermer.
 
 ---
 
