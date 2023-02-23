@@ -1,9 +1,9 @@
-var showText = document.getElementById("show-text");
-var hoursRegistered = document.getElementById("number-of-hours");
-var commentToHoursRegistered = document.getElementById("comment");
-var numberOfHours = document.getElementById("number-of-hours");
+let showText = document.getElementById("show-text");
+let hoursRegistered = document.getElementById("number-of-hours");
+let commentToHoursRegistered = document.getElementById("comment");
+let numberOfHours = document.getElementById("number-of-hours");
 let counter = -1;
-var hoursCounter = 0;
+let hoursCounter = 0;
 
 function getTimeSheet() {
   //Get the previously saved values
@@ -27,12 +27,9 @@ function saveHours(event) {
       hours: hoursRegistered.valueAsNumber,
       comment: commentToHoursRegistered.value,
     };
-
     // Push the new values to the timeSheet-array and set in localstorage
     let timeSheet = getTimeSheet();
     timeSheet.push(todaysTimeSheet);
-
-    //Grunnen til at jeg bruker alert er for å vise bruker at timene er lagret før siden reloader.
     alert("timene er lagret");
     setTimeSheet(timeSheet);
   }
